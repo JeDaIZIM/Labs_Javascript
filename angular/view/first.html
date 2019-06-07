@@ -1,0 +1,13 @@
+<div ng-controller="firstController">
+  <label for="firstPerson">Поле для введення тексту:</label>
+  <input type="text" id='firstPerson' placeholder="Type your text" ng-model="text"
+  <br></br>
+  <p ng-bind="model.history.length"></p>
+  <h1>{{text}}</h1>
+  <button ng-click="typing(text)">Send</button>
+  <ul>
+    <li ng-repeat='text in model.history track by $index'>
+      <h3>{{text}}</h3>
+    </li>
+  </ul>
+</div>
